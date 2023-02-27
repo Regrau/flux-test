@@ -1,0 +1,5 @@
+{
+    "apps-v1.Deployment-grafana.yaml": "environments/default/main.jsonnet",
+    "apps-v1.Deployment-prometheus.yaml": "environments/default/main.jsonnet",
+    "v1.Service-promsvc.yaml": "environments/default/main.jsonnet"
+}
