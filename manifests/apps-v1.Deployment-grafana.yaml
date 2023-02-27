@@ -1,8 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    tanka.dev/environment: ef8004c80176691d8a0f3688c077aa401e0b6083174fa72e
   name: grafana
   namespace: monitoring
 spec:

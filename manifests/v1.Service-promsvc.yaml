@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: promsvc
+  name: promsvc
+  namespace: monitoring
+spec:
+  ports:
+  - name: promsvc
+    port: 9090
+    targetPort: 9090
+  selector:
+    name: promsvc
+  type: NodePort
