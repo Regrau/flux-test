@@ -1,0 +1,4 @@
+{
+    "apps-v1.Deployment-grafana.yaml": "environments/default/main.jsonnet",
+    "v1.Service-grafana.yaml": "environments/default/main.jsonnet"
+}

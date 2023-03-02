@@ -1,21 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prometheus
+  name: grafana
   namespace: monitoring
 spec:
+  minReadySeconds: 10
+  replicas: 1
+  revisionHistoryLimit: 10
   selector:
     matchLabels:
-      name: prometheus
+      name: grafana
   template:
     metadata:
       labels:
-        name: prometheus
+        name: grafana
     spec:
       containers:
-      - image: prom/prometheus
+      - image: grafana/grafana
         imagePullPolicy: IfNotPresent
-        name: prom
+        name: grafana
         ports:
-        - containerPort: 9090
-          name: prom
+        - containerPort: 3000
+          name: ui

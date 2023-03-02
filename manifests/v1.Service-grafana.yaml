@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    name: promsvc
-  name: promsvc
+    name: grafana
+  name: grafana
   namespace: monitoring
 spec:
   ports:
-  - name: promsvc
-    port: 9090
-    targetPort: 9090
+  - name: grafana-ui
+    port: 3000
+    targetPort: 3000
   selector:
-    name: promsvc
+    name: grafana
   type: NodePort
